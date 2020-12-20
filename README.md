@@ -20,3 +20,8 @@ kubectl apply -f deploy/mongo/secrets.yaml
 ```
 kubectl apply -f ./deploy/mongo/deployment.yaml
 ```
+
+4- Apply mongo service file to the k8s cluster
+```
+kubectl apply -f ./deploy/mongo/service.yaml
+```
