@@ -6,9 +6,9 @@ install kubectl command line and configure it with your cluster
 
 ### Getting Started
 
-##### 1- Config mongo root username/password
-1- Modify file deploy/mongo/secrets.yaml and define your username and password. 
-The values must be base64 encoded. You can use this command to base64 encode your values. 
+`#### 1- Config mongo root username/password
+Modify file deploy/mongo/secrets.yaml and define your username and password. 
+The values must be base64 encoded. You can use below command to base64 encode your values. 
 ```
 $ echo -n 'YOUR_VALUE' | base64 
 ```
@@ -16,13 +16,13 @@ $ echo -n 'YOUR_VALUE' | base64
 * Current configured username: mongo
 * Current configured password: mongo
 
-##### 2- Create mongo secret on the cluster
+#### 2- Create mongo secret on the cluster
 Mongo secret config file configured with type Opaque and contains mongo-root-username and mongo-root-password
 ```
 kubectl apply -f deploy/mongo/secrets.yaml
 ```
 
-##### 3- Deploy mongo db on the cluster by applying the deployment file
+#### 3- Deploy mongo db on the cluster by applying the deployment file
 ```
 kubectl apply -f ./deploy/mongo/deployment.yaml
 ```
